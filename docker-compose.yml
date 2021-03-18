@@ -14,8 +14,8 @@ services:
     build:
       context: ./
       dockerfile: dockerfile
+    restart: always
     ports:
-      - 8090:80
+      - 8200:80
     depends_on:
       - laravel-db
-
