@@ -1,10 +1,8 @@
 FROM php:7.4.1-apache
 
-
-
-COPY . /var/www/html/
-COPY .env.example /var/www/html/.env
 WORKDIR  /var/www/html/
+COPY . .
+COPY .env.example .env
 
 RUN a2enmod rewrite
 

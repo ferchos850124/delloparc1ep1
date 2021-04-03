@@ -8,6 +8,7 @@ services:
     ports: 
       - 33069:3306
     volumes:
+      - ./sql/facturacion.sql:/docker-entrypoint-initdb.d/facturacion.sql
       - ./database/schemas/:/var/lib/mysql
   
   laravel:
